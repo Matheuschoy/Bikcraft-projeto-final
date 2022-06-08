@@ -1,0 +1,52 @@
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120;
+}
+
+.parceiros h2 {
+  margin-bottom: 60px;
+}
+
+.parceiros ul {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /*1fr 1fr 1fr 1fr*/
+  margin: 0 auto;  /*centraliza o conteudo*/
+}
+
+.parceiros li {
+  display: flex;
+  padding: 32px;
+  border-left:  2px solid var(--cor-2);
+}
+
+.parceiros img {
+  margin: auto;  /*Alinha totalmente ao centro com o flex no pai*/
+}
+
+.parceiros li:first-child, .parceiros li:nth-child(5) { /* 1ª e 5ª item sem borda */
+  border-left: none;
+}
+
+.parceiros li:nth-child(n + 5) { /* A partir do 5º item recebe borda no topo*/
+  border-top: 2px solid var(--cor-2);
+}
+
+@media (max-width: 800px) {
+  .parceiros {
+    padding-bottom: 60px;
+  }
+  .parceiros h2 {
+    margin-bottom: 20px;
+  }
+  .parceiros ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  .parceiros li:nth-child(n + 3) { /* A partir do 3º item recebe borda no topo*/
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(odd) { /* Itens impares sem borda */
+    border-left: none;
+  }
+}
