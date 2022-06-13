@@ -17,7 +17,7 @@
   color: var(--cor-p5);
   font-size: 18px;
   line-height: 1.33;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
   max-width: max-content;
 }
@@ -35,6 +35,24 @@
   background: var(--cor-9);
 }
 
+.botao.seta {
+  display: flex;
+  align-items: center;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: .3s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(5px);
+}
 
 @media (max-width: 600px) {
   .botao {
